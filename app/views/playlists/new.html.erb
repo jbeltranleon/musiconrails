@@ -1,0 +1,15 @@
+
+<%= form_for(@playlist) do |f| %>
+<!-- para crear un formulario basico
+form_for es un helper para crear formularios, nos ahorra una buena cantidad de codigo de html, toma valores por default -->
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :number_of_votes %>
+	<%= f.text_field :number_of_votes %>
+
+	<%= f.submit %>
+
+<%end%>
+<!-- 
+si queremos validar si un campo esta lleno o no, podemos ver como se puede realizar en la carpeta de modelos -->

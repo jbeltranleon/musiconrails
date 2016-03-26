@@ -1,0 +1,25 @@
+<!-- index nos muestra todas las entradas que tenemos para ese modelo -->
+
+<!-- no olvidemos que html.erb es el formato que vamos a usar para poder
+usar ruby dentro de html :)  -->
+
+<h1>Listado de listas de reproduccion</h1>
+
+<table>
+	<thead>
+	<th>Name</th>
+	<th>Number of votes</th>
+	</thead>
+	<tbody>
+		<!-- la variable del controlador esta disponible en la vista que el controlador indica que debe mostrarse en pantalla <+% sintaxis de erb%+>
+		=para que se muestre en pantalla-->
+
+		<% @playlists.each do |playlist| %>
+		<!-- aca estamos iterando las playlists para mostrarlas en el navegador -->
+			<tr>
+				<td><%= playlist.name%></td>
+				<td><%= playlist.number_of_votes%></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
