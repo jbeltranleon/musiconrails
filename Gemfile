@@ -60,5 +60,7 @@ gem 'rspotify'
 
 gem 'devise'
 
+gem 'rdoc-data'
+
 end
 
